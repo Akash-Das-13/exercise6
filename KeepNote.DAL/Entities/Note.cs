@@ -13,6 +13,10 @@ namespace KeepNote.DAL.Entities
        Description - string
        CreatedBy - int
     */
+    public int NoteId { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public int CreatedBy { get; set; }
  
   }
 }

@@ -12,7 +12,7 @@ namespace test
       string constr = Environment.GetEnvironmentVariable("MSSQL_URL");
       if (constr == null)
       {
-        constr = @"server=.\sqlexpress;database=keepnote_db;integrated security=true";
+        constr = @"server=.\sqlexpress01;database=keepnote_db;integrated security=true";
       }
       con = new SqlConnection(constr);
       con.Open();
