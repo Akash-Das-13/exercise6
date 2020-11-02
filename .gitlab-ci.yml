@@ -1,0 +1,19 @@
+image: mcr.microsoft.com/dotnet/core/sdk
+stages:
+  - build
+  - test
+  - publish
+build:
+  stage: build
+  script:
+    - 'dotnet restore'
+    - 'dotnet build'
+test:
+  stage: test
+  script:
+    - 'dotnet test test/test.csproj'
+piblish:
+  stage: publish
+  script:
+    - 'dotnet publish KeepNote.DAL/KeepNote.DAL.csproj'
+  
